@@ -1,11 +1,11 @@
 # Adapted from https://sebest.github.io/post/protips-using-gunicorn-inside-a-docker-image/
 
-FROM python:2.7
+FROM python:3.9
 
-RUN pip install gunicorn json-logging-py django==1.9 pyparsing MySQL-python pybtex
+COPY requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 
 COPY logging.conf /logging.conf
-#COPY gunicorn.conf /gunicorn.conf
 
 COPY NodeSoftware /NodeSoftware
 
