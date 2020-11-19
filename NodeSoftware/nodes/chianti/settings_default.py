@@ -136,8 +136,7 @@ SECRET_KEY = '=4nk7k_v3p@gin!bgp*oh2_t@(_hfdvuza27g1&_r4j3(2!+i1'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #'DIRS': [os.path.join(BASE_PATH,'static', 'templates'),
-        'DIRS': ['/users/guy/vamdc/NodeSoftware/static/templates'],
+        'DIRS': ['/NodeSoftware/static/templates'],
     },
 ]
 
