@@ -15,7 +15,5 @@ ENV PYTHONPATH=${PYTHONPATH}:/NodeSoftware:/NodeSoftware/nodes/chianti
 
 RUN mkdir /var/log/gunicorn
 
-#ENTRYPOINT ["/usr/local/bin/gunicorn", "--config", "/gunicorn.conf", "--log-config", "/logging.conf", "-b", ":8000", "myapp:app"]
-ENTRYPOINT ["/usr/local/bin/gunicorn", "-b", ":8000", "--preload", "--access-logfile", "/var/log/gunicorn/access.log", "--log-file", "/var/log/gunicorn/error.log", "nodes.chianti.wsgi:application"]
-
+ENTRYPOINT ["gunicorn", "-b", ":8000", "--preload", "--access-logfile", "/var/log/gunicorn/access.log", "--log-file", "/var/log/gunicorn/error.log", "node.wsgi:application"]
 
