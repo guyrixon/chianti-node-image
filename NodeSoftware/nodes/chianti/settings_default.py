@@ -172,6 +172,11 @@ LOGGING = {
             'level':'DEBUG',
             'class':'logging.StreamHandler',
         },
+        'logfile': {
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename': '/var/log/django/all.log',
+        },
     },
     'root': {
         'handlers': ['console'],
@@ -179,36 +184,37 @@ LOGGING = {
     },    
     'loggers': {
         'django': {
-            'handlers':['console'],
+            'handlers':['console','logfile'],
             'level':'INFO',
             'propagate': False,
         },
         'vamdc': {
-            'handlers': ['console'],
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
         'vamdc.tap': {
-            'handlers': ['console'],
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
         'vamdc.tap.sql': {
-            'handlers': ['console'],
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
         'vamdc.tap.generator': {
-            'handlers': ['console'],
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
         'vamdc.node': {
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
         'vamdc.node.queryfu': {
-            'handlers': ['console'],
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
