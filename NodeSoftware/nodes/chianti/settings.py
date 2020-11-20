@@ -22,7 +22,7 @@ DATABASES = {
     'ENGINE'   : 'django.db.backends.mysql', # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'
     'NAME'     : 'chianti7',
     'USER'     : 'vamdc',
-    'PASSWORD' : '',
+    'PASSWORD' : 'irrelevant',
     'HOST'     : 'chianti-db',
     'PORT'     : ''
   }
