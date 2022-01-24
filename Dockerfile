@@ -9,6 +9,8 @@ COPY logging.conf /logging.conf
 
 COPY NodeSoftware /NodeSoftware
 
+COPY chianti7.db /chianti7.db
+
 EXPOSE 8000
 
 ENV PYTHONPATH=${PYTHONPATH}:/NodeSoftware:/NodeSoftware/nodes/chianti

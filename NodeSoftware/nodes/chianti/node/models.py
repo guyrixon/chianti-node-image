@@ -109,15 +109,15 @@ class Transitions(models.Model):
 
     def upperStateRef(self):
         if self.finalstateindex.energy > self.initialstateindex.energy:
-            return self.finalstateindex.id
+            return self.finalstateindex_id
         else:
-            return self.initialstateindex.id
+            return self.initialstateindex_id
 
     def lowerStateRef(self):
         if self.finalstateindex.energy < self.initialstateindex.energy:
-            return self.finalstateindex.id
+            return self.finalstateindex_id
         else:
-            return self.initialstateindex.id
+            return self.initialstateindex_id
 
 
 

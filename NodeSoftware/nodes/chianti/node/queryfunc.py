@@ -247,7 +247,7 @@ def genericQuery(sql, q, limit):
     # reach all other models. Note that a queryset is actually not yet
     # hitting the database, making it very efficient.
     logging.debug("getting transitions")
-    transs = models.Transitions.objects.filter(q)
+    transs = models.Transitions.objects.select_related().filter(q)
 
     # count the number of matches, make a simple truncation if there are
     # too many (record the coverage in the returned header)
