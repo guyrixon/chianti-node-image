@@ -39,3 +39,6 @@ EXAMPLE_QUERIES = ['SELECT ALL WHERE RadTransWavelength > 5000 AND RadTransWavel
 
 
 STATIC_URL = '/static/'
+
+# Needed to work with reverse proxy.
+USE_X_FORWARDED_HOST = True
